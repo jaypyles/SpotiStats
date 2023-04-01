@@ -7,11 +7,11 @@ description = ""
 authors = [
     {name = "jaypyles", email = "jpylesbusiness@gmail.com"},
 ]
-dependencies = []
-requires-python = ">=3.10"
+dependencies = ['requests', 'python-dotenv', 'click']
+requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}
 
 [build-system]
-requires = ["pdm-pep517>=1.0"]
-build-backend = "pdm.pep517.api"
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"

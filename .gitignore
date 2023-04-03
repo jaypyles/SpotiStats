@@ -1,1 +1,4 @@
 .env
+__pypackages__/
+SpotiStats.egg-info/
+SpotiStats/__pycache__/

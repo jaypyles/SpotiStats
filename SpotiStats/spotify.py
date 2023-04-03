@@ -12,7 +12,7 @@ class SpotifyObject():
         self.name = name
         self.url = url
     def __repr__(self) -> str:
-        return f"Name: {self.name}, ID: {self.id}, URL: {self.url}"
+        return f"Name: {self.name}, URL: {self.url}"
 
 
 class Artist(SpotifyObject):

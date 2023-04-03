@@ -2,6 +2,8 @@ README.md
 pyproject.toml
 SpotiStats/__init__.py
 SpotiStats/__main__.py
+SpotiStats/spotify.py
+SpotiStats/test.py
 SpotiStats/utils.py
 SpotiStats.egg-info/PKG-INFO
 SpotiStats.egg-info/SOURCES.txt

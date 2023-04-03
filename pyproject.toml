@@ -7,7 +7,7 @@ description = ""
 authors = [
     {name = "jaypyles", email = "jpylesbusiness@gmail.com"},
 ]
-dependencies = ['requests', 'python-dotenv', 'click']
+dependencies = ['requests', 'python-dotenv', 'click', 'jsonpath_ng']
 requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}

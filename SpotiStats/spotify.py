@@ -84,18 +84,19 @@ class Spotify():
             }
             constructed_query = query.replace(" ", "%20") 
             base_url = f"https://api.spotify.com/v1/search?q={constructed_query}&type={type}&limit=1&offset={offset}"
-            request = requests.get(base_url, headers=headers).json()
+            request = loads(dumps(requests.get(base_url, headers=headers).json()))
             if type == "artist":
-                return self.__parse_artist(request)
+                items = request["artists"]["items"][0]
+                return self.__parse_artist(items)
             elif type == "album":
-                return self.__parse_album(request)
+                items = request["albums"]["items"][0]
+                return self.__parse_album(items)
             elif type == "track":
-                return self.__parse_track(request)
+                items = request["tracks"]["items"][0]
+                return self.__parse_track(items)
         else:
             raise AuthenticationError("Could not be authenticated.")
-    def __parse_artist(self, json_data) -> Artist:
-        artist_data = loads(dumps(json_data))
-        items = artist_data["artists"]["items"][0]
+    def __parse_artist(self, items) -> Artist:
         return Artist(
             url = items["external_urls"]["spotify"],
             followers= items["followers"]["total"],
@@ -104,9 +105,7 @@ class Spotify():
             name = items["name"],
             popularity=items["popularity"]
         )
-    def __parse_album(self, json_data) -> Album:
-        album_data = loads(dumps(json_data))
-        items = album_data["albums"]["items"][0]
+    def __parse_album(self, items) -> Album:
         artists = items["artists"]
         artist_list = [] 
         for artist in artists:
@@ -127,9 +126,7 @@ class Spotify():
             name = items["name"],
             url = items["external_urls"]["spotify"]
         )
-    def __parse_track(self, json_data):
-        track_data = loads(dumps(json_data))
-        items = track_data["tracks"]["items"][0]
+    def __parse_track(self, items):
         album_data = items["album"]
         album = Album(
             artists = None, 

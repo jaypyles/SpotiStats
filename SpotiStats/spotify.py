@@ -12,7 +12,8 @@ class SpotifyObject():
         self.name = name
         self.url = url
     def __repr__(self) -> str:
-        return self.name
+        return f"Name: {self.name}, ID: {self.id}, URL: {self.url}"
+
 
 class Artist(SpotifyObject):
     def __init__(self, genres: Optional[str], followers: Optional[str], popularity: Optional[str], 
@@ -96,6 +97,7 @@ class Spotify():
                 return self.__parse_track(items)
         else:
             raise AuthenticationError("Could not be authenticated.")
+
     def __parse_artist(self, items) -> Artist:
         return Artist(
             url = items["external_urls"]["spotify"],

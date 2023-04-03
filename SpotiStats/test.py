@@ -7,6 +7,6 @@ CLIENT_SECRET = os.environ["CLIENT_SECRET"]
 
 auth = Authenticator(CLIENT_ID, CLIENT_SECRET)
 spot = Spotify(auth)
-album = spot.search("radiohead", "track")
+album = spot.search("travis scott", "track")
 print(album)
 

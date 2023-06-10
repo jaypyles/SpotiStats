@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.null-ls_814785_.env
 
 # C extensions
 *.so

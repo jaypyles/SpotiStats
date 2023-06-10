@@ -1,8 +1,8 @@
+import os
 import webbrowser
+
 import click
 from dotenv import load_dotenv
-import os
-from webbrowser import open
 
 from SpotiStats.spotify import Authenticator, Spotify
 

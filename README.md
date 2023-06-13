@@ -4,7 +4,11 @@ A simple command line application used for interacting with the Spotify api. Cur
 
 # Installation
 
-Ensure pipx is installed with `pip install pipx`. Run `pipx ensurepath`, then from inside the cloned repo, run: `pipx install .`.
+Ensure pipx is installed with `pip install pipx`.
+
+Run `pipx ensurepath`.
+
+From inside the cloned repo, run: `pipx install .`.
 
 # Todo
 

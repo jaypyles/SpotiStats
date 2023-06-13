@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 .null-ls_814785_.env
 .DS_Store
+SpotiStats.egg-info/
 
 # C extensions
 *.so
@@ -12,7 +13,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+dist/*
 downloads/
 eggs/
 .eggs/

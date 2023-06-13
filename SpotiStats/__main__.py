@@ -33,5 +33,8 @@ def search(option, query, open):
         url = searched_term.url
         webbrowser.open(url)
 
-if __name__ == "__main__":
+def main():
     cli()
+
+if __name__ == "__main__":
+    main()

@@ -1,4 +1,0 @@
-requests
-python-dotenv
-click
-jsonpath_ng
